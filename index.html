@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurisConsult - Bufete de Abogados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #b45309;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-navy { background-color: var(--primary); }
+        .text-gold { color: var(--accent); }
+        .border-gold { border-color: var(--accent); }
+        .btn-gold {
+            background-color: var(--accent);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: #92400e;
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 glass shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-serif font-bold text-navy tracking-tight">JURIS<span class="text-gold">CONSULT</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="nav-link text-navy font-semibold px-3 py-2 text-sm uppercase tracking-wider">Inicio</a>
+                        <a href="#servicios" class="nav-link text-navy font-semibold px-3 py-2 text-sm uppercase tracking-wider">Servicios</a>
+                        <a href="#nosotros" class="nav-link text-navy font-semibold px-3 py-2 text-sm uppercase tracking-wider">Nosotros</a>
+                        <a href="#contacto" class="btn-gold px-6 py-2 rounded-sm text-sm font-bold uppercase tracking-widest shadow-lg">Consulta Gratis</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-navy focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-2">
+            <a href="#inicio" class="block px-3 py-2 text-navy font-semibold">Inicio</a>
+            <a href="#servicios" class="block px-3 py-2 text-navy font-semibold">Servicios</a>
+            <a href="#nosotros" class="block px-3 py-2 text-navy font-semibold">Nosotros</a>
+            <a href="#contacto" class="block px-3 py-2 text-gold font-bold">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="relative h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000" 
+                 alt="Fondo Legal" class="w-full h-full object-cover opacity-20 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl">
+                <span class="text-gold font-bold uppercase tracking-widest text-sm mb-4 block">Excelencia en Derecho</span>
+                <h1 class="text-5xl md:text-7xl font-serif text-navy mb-6 leading-tight">Defendemos sus intereses con <span class="italic">integridad</span> y rigor.</h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    Más de 15 años de experiencia brindando soluciones legales estratégicas para individuos y empresas a nivel nacional.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#servicios" class="btn-gold px-8 py-4 rounded-sm font-bold shadow-xl">Ver Servicios</a>
+                    <a href="#contacto" class="border border-navy text-navy px-8 py-4 rounded-sm font-bold hover:bg-navy hover:text-white transition-all">Agendar Cita</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-serif text-navy mb-4">Áreas de Especialización</h2>
+                <div class="h-1 w-20 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="p-8 border border-slate-100 hover:shadow-2xl transition-shadow bg-slate-50 group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-3">Derecho Civil</h3>
+                    <p class="text-slate-600 leading-relaxed">Resolución de conflictos contractuales, propiedad y responsabilidad civil con un enfoque mediador.</p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="p-8 border border-slate-100 hover:shadow-2xl transition-shadow bg-slate-50 group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-3">Derecho Corporativo</h3>
+                    <p class="text-slate-600 leading-relaxed">Asesoría integral para empresas: constitución, fusiones, adquisiciones y cumplimiento normativo.</p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="p-8 border border-slate-100 hover:shadow-2xl transition-shadow bg-slate-50 group">
+                    <div class="text-gold mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A10.003 10.003 0 0112 3v12m0 0h3.582a8.217 8.217 0 00-4.902 4.31L12 21" /></svg>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-navy mb-3">Defensa Penal</h3>
+                    <p class="text-slate-600 leading-relaxed">Representación vigorosa y estratégica en procesos penales, garantizando el debido proceso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-24 bg-navy text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-32 h-32 border-t-2 border-l-2 border-gold z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" 
+                         alt="Abogado Principal" class="relative z-10 w-full rounded-sm grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 border-b-2 border-r-2 border-gold z-0"></div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-serif mb-6 italic text-gold">Compromiso inquebrantable</h2>
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        Fundado en 2008, nuestro bufete se ha distinguido por una práctica jurídica basada en la ética y la eficiencia. Entendemos que cada caso es único y requiere una atención personalizada al más alto nivel.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-gold">✔</span>
+                            <span>Más de 500 casos ganados</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-gold">✔</span>
+                            <span>Atención personalizada 24/7</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-gold">✔</span>
+                            <span>Estrategias legales innovadoras</span>
+                        </li>
+                    </ul>
+                    <button class="bg-gold text-white px-10 py-4 font-bold tracking-widest uppercase text-sm hover:bg-white hover:text-navy transition-colors">Conozca al equipo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-10 md:p-16 shadow-2xl rounded-sm border-t-4 border-gold">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-serif text-navy mb-2">Solicite una Consulta</h2>
+                    <p class="text-slate-500 italic">La primera evaluación es gratuita y confidencial.</p>
+                </div>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-navy mb-2">Nombre Completo</label>
+                            <input type="text" required class="w-full bg-slate-50 border-b border-slate-300 py-3 px-4 focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-navy mb-2">Correo Electrónico</label>
+                            <input type="email" required class="w-full bg-slate-50 border-b border-slate-300 py-3 px-4 focus:outline-none focus:border-gold transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-navy mb-2">Asunto Legal</label>
+                        <select class="w-full bg-slate-50 border-b border-slate-300 py-3 px-4 focus:outline-none focus:border-gold transition-colors appearance-none">
+                            <option>Derecho Civil</option>
+                            <option>Derecho Corporativo</option>
+                            <option>Derecho Penal</option>
+                            <option>Otros</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-navy mb-2">Mensaje</label>
+                        <textarea rows="4" class="w-full bg-slate-50 border-b border-slate-300 py-3 px-4 focus:outline-none focus:border-gold transition-colors"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-gold w-full md:w-auto px-12 py-4 font-bold uppercase tracking-widest">Enviar Mensaje</button>
+                    </div>
+                </form>
+                <div id="success-msg" class="hidden mt-6 p-4 bg-green-50 text-green-700 text-center rounded">
+                    ¡Gracias! Nos pondremos en contacto con usted a la brevedad.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xl font-serif font-bold text-white tracking-tight mb-4 block">JURIS<span class="text-gold">CONSULT</span></span>
+            <p class="text-slate-500 text-sm mb-6">
+                Av. de la Justicia 456, Ciudad de México. | +52 (55) 1234-5678 | info@jurisconsult.com
+            </p>
+            <div class="flex justify-center space-x-6 mb-8 text-slate-400">
+                <a href="#" class="hover:text-gold transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-gold transition-colors">Twitter</a>
+                <a href="#" class="hover:text-gold transition-colors">Facebook</a>
+            </div>
+            <p class="text-slate-600 text-xs uppercase tracking-widest">
+                © 2025 JurisConsult. Todos los derechos reservados. | Aviso de Privacidad
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menú móvil
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Simulación de envío de formulario
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+        });
+
+        // Cerrar menú móvil al hacer click en enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
