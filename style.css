@@ -1,0 +1,63 @@
+:root {
+    --primary: #0f172a;
+    --accent: #b45309;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1,
+ h2,
+ h3,
+ .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.bg-navy {
+    background-color: var(--primary);
+}
+
+.text-gold {
+    color: var(--accent);
+}
+
+.border-gold {
+    border-color: var(--accent);
+}
+
+.btn-gold {
+    background-color: var(--accent);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #92400e;
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
