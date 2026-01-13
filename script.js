@@ -31,13 +31,12 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         });
 
         if (response.ok) {
-            // Opción B: Mostrar mensaje en la misma página (AJAX)
-            form.reset();
-            form.classList.add('hidden');
-            document.getElementById('success-msg').classList.remove('hidden');
+            // Opción A: Redirección activada
+            window.location.href = 'gracias.html';
 
-            // Si prefieres la Opción A (Redirección), descomenta la siguiente línea y borra las anteriores de este bloque if:
-            // window.location.href = 'gracias.html';
+            // form.reset();
+            // form.classList.add('hidden');
+            // document.getElementById('success-msg').classList.remove('hidden');
         } else {
             const data = await response.json();
             if (Object.hasOwn(data, 'errors')) {
