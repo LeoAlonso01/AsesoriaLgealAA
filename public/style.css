@@ -19,6 +19,10 @@ h1,
     background-color: var(--primary);
 }
 
+.text-navy {
+    color: var(--primary);
+}
+
 .text-gold {
     color: var(--accent);
 }
